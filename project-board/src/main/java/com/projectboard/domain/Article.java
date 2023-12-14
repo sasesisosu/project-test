@@ -47,7 +47,7 @@ public class Article extends AuditingFields{
 	@ToString.Exclude
 	@OrderBy("id")
 	@OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
-//	@OneToMany(mappedBy = "articl") - 실무에서는 보통 cascade 제거하고 함
+//	@OneToMany(mappedBy = "article") - 실무에서는 보통 cascade 제거하고 함
 	private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 	
 
